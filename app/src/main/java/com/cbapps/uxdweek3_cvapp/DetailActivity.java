@@ -9,6 +9,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.cbapps.uxdweek3_cvapp.projects.Project;
+import com.squareup.picasso.Picasso;
 
 /**
  * @author Coen Boelhouwers
@@ -29,6 +30,8 @@ public class DetailActivity extends AppCompatActivity {
 		Toolbar toolbar = (Toolbar) findViewById(R.id.toolBar);
 		TextView projectTitleTextView = (TextView) findViewById(R.id.projectTitleTextView);
 		TextView projectSummaryTextView = (TextView) findViewById(R.id.projectSummaryTextView);
+		TextView projectFullTextView = (TextView) findViewById(R.id.projectFullTextView);
+		TextView projectYearTextView = (TextView) findViewById(R.id.projectYearTextView);
 		ImageView projectImageView = (ImageView) findViewById(R.id.projectImageView);
 
 		setSupportActionBar(toolbar);
@@ -36,7 +39,9 @@ public class DetailActivity extends AppCompatActivity {
 		if (project != null) {
 			projectTitleTextView.setText(project.getTitle());
 			projectSummaryTextView.setText(project.getSummary());
-			projectImageView.setImageResource(project.getImageRes());
+			projectFullTextView.setText(project.getFullText());
+			projectYearTextView.setText(String.valueOf(project.getYear()));
+			Picasso.with(getBaseContext()).load(project.getImageRes()).into(projectImageView);
 		}
 	}
 }

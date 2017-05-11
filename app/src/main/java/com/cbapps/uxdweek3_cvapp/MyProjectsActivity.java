@@ -42,9 +42,6 @@ public class MyProjectsActivity extends AppCompatActivity {
 		Toolbar toolbar = (Toolbar) findViewById(R.id.toolBar);
 		setSupportActionBar(toolbar);
 
-		adapter.setAllProjects(Arrays.asList(
-				Project.PROJECT_1,
-				Project.PROJECT_2
-		));
+		adapter.setAllProjects(Arrays.asList(Project.ALL_PROJECTS));
 	}
 }
