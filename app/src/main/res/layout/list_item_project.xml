@@ -2,6 +2,7 @@
 <android.support.constraint.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/layout"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -14,45 +15,46 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="72dp"
-        android:layout_marginTop="8dp"
         android:maxLines="1"
         android:text="@string/app_name"
         android:textAppearance="@style/TextAppearance.AppCompat.Headline"
-        app:layout_constraintBottom_toTopOf="@+id/projectFullTextView"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toLeftOf="@+id/projectYearTextView"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintHorizontal_bias="0.9"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="8dp"/>
 
     <TextView
         android:id="@+id/projectFullTextView"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
         android:layout_marginStart="0dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginTop="8dp"
         android:maxLines="1"
         android:text="@string/app_name"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="@+id/projectTitleTextView"
         app:layout_constraintRight_toLeftOf="@+id/projectYearTextView"
-        app:layout_constraintTop_toBottomOf="@+id/projectTitleTextView"/>
+        app:layout_constraintHorizontal_bias="0.0"
+        android:layout_marginTop="0dp"
+        app:layout_constraintTop_toBottomOf="@+id/projectTitleTextView"
+        />
 
     <ImageView
         android:id="@+id/projectImageView"
         android:transitionName="projectImageView"
         android:layout_width="48dp"
         android:layout_height="48dp"
-        android:layout_marginBottom="8dp"
+        android:maxWidth="48dp"
+        android:maxHeight="48dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
         android:scaleType="centerCrop"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.6"
         app:srcCompat="@mipmap/ic_launcher"
-        android:contentDescription="@string/app_name"/>
+        android:contentDescription="@string/app_name"
+        app:layout_constraintTop_toTopOf="@+id/projectTitleTextView"
+        android:layout_marginTop="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/projectFullTextView"
+        android:layout_marginBottom="0dp"/>
 
     <TextView
         android:id="@+id/projectYearTextView"
