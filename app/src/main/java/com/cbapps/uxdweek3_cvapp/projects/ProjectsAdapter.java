@@ -79,7 +79,10 @@ public class ProjectsAdapter extends RecyclerView.Adapter<ProjectsAdapter.Projec
 			titleTextView.setText(project.getTitle());
 			summaryTextView.setText(project.getSummary());
 			yearTextView.setText(String.valueOf(project.getYear()));
-			Picasso.with(layout.getContext()).load(project.getImageRes())
+			Picasso.with(layout.getContext())
+					.load(project.getImageRes())
+					.resize(100, 100)
+					.centerCrop()
 					.into(imageView);
 		}
 	}

@@ -33,15 +33,24 @@ public class DetailActivity extends AppCompatActivity {
 		TextView projectFullTextView = (TextView) findViewById(R.id.projectFullTextView);
 		TextView projectYearTextView = (TextView) findViewById(R.id.projectYearTextView);
 		ImageView projectImageView = (ImageView) findViewById(R.id.projectImageView);
+		ImageView myImageView = (ImageView) findViewById(R.id.imageView2);
 
 		setSupportActionBar(toolbar);
+
+		Picasso.with(getBaseContext())
+				.load(R.mipmap.photo_efteling_small)
+				.resize(100, 100)
+				.centerCrop()
+				.into(myImageView);
 
 		if (project != null) {
 			projectTitleTextView.setText(project.getTitle());
 			projectSummaryTextView.setText(project.getSummary());
 			projectFullTextView.setText(project.getFullText());
 			projectYearTextView.setText(String.valueOf(project.getYear()));
-			Picasso.with(getBaseContext()).load(project.getImageRes()).into(projectImageView);
+			Picasso.with(getBaseContext())
+					.load(project.getImageRes())
+					.into(projectImageView);
 		}
 	}
 }
