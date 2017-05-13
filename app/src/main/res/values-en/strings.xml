@@ -1,3 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="my_projects">My Projects</string>
+    <string name="my_introduction">My name is Coen Boelhouwers and I follow the training
+        \'Technical Computer Science Education\' of Avans Breda (2016 - 2020).
+        This app shows what I can manage to achieve, as well as sums up all my previous
+        projects.</string>
 </resources>

@@ -3,4 +3,7 @@
     <string name="my_name" translatable="false">Coen Boelhouwers</string>
     <string name="my_contact" translatable="false">boelhouwers.coen@gmail.com</string>
     <string name="my_projects">Mijn projecten</string>
+    <string name="my_introduction">Mijn naam is Coen Boelhouwers en ik zit op de opleiding
+    \'Technische Informatica\' van het Avans Breda (2016 - 2020). In deze app laat ik zien
+    wat ik kan terwijl ik mijn eerdere projecten opsom.</string>
 </resources>
