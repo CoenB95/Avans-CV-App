@@ -69,7 +69,7 @@ public class ProjectsAdapter extends RecyclerView.Adapter<ProjectsAdapter.Projec
 			layout.setOnClickListener(new View.OnClickListener() {
 				@Override
 				public void onClick(View v) {
-					listener.onProjectSelected(project);
+					listener.onProjectSelected(project, imageView);
 				}
 			});
 		}
@@ -85,6 +85,6 @@ public class ProjectsAdapter extends RecyclerView.Adapter<ProjectsAdapter.Projec
 	}
 
 	public interface OnProjectSelectedListener {
-		void onProjectSelected(Project p);
+		void onProjectSelected(Project p, View imageView);
 	}
 }

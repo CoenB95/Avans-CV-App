@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name" translatable="false">UXD Week 3 - CV App</string>
-    <string name="show_my_projects">Mijn projecten</string>
     <string name="my_name" translatable="false">Coen Boelhouwers</string>
     <string name="my_contact" translatable="false">boelhouwers.coen@gmail.com</string>
+    <string name="my_projects">Mijn projecten</string>
 </resources>
